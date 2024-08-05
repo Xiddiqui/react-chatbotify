@@ -12028,7 +12028,7 @@ const Ys = ({
                 width: "100%",
                 height: "100%",
                 backgroundColor: "#fff",
-                zIndex: 9999
+                zIndex: 9990
               }
             }
           )
