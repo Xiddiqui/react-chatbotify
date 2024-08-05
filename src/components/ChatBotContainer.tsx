@@ -744,7 +744,7 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 							width: "100%",
 							height: "100%",
 							backgroundColor: "#fff",
-							zIndex: 9999
+							zIndex: 9990
 						}}
 					>
 					</div>
