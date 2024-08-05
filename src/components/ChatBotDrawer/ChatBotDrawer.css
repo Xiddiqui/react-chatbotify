@@ -10,7 +10,7 @@
     flex-direction: column;
     width: 45%;
     height: 550px;
-    z-index: 10000;
+    z-index: 1200;
     left: 27%;
     backdrop-filter: blur(15px);
 }
