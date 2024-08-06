@@ -679,8 +679,10 @@ const sl = ({
 }) => {
   var k, ee, fe, re, Ae, W, O, G, X, $, Q, se, ne, Pe, De, Le;
   const { botOptions: b, setBotOptions: x } = _t(), L = {
-    background: `linear-gradient(to right, ${(k = b.theme) == null ? void 0 : k.secondaryColor},
-			${(ee = b.theme) == null ? void 0 : ee.primaryColor})`,
+    // background: `linear-gradient(to right, ${botOptions.theme?.secondaryColor },
+    // 	${botOptions.theme?.primaryColor})`,
+    background: `linear-gradient(360deg, ${(k = b.theme) == null ? void 0 : k.primaryColor} 
+		5.46%, ${(ee = b.theme) == null ? void 0 : ee.secondaryColor} 92.95%)`,
     ...b.headerStyle
   }, T = {
     headerAvatar: {

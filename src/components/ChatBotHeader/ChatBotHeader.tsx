@@ -33,10 +33,12 @@ const ChatBotHeader = ({
 
 	// styles for header
 	const headerStyle: React.CSSProperties = {
-		background: `linear-gradient(to right, ${botOptions.theme?.secondaryColor },
-			${botOptions.theme?.primaryColor})`,
-		...botOptions.headerStyle
-	}
+	// background: `linear-gradient(to right, ${botOptions.theme?.secondaryColor },
+	// 	${botOptions.theme?.primaryColor})`,
+		background: `linear-gradient(360deg, ${botOptions.theme?.primaryColor} 
+		5.46%, ${botOptions.theme?.secondaryColor} 92.95%)`,
+		...botOptions.headerStyle,
+	};
 
 	// icons in header
 	const headerImages = {
