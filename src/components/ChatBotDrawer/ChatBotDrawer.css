@@ -1,3 +1,19 @@
+/* .rcb-chat-drawer-container {
+    position: fixed;
+    bottom: 39px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: var(--Main-Gredient---Popup, linear-gradient(96deg, rgba(255, 255, 255, 0.70) 0.34%, rgba(255, 255, 255, 0.50) 98.94%));
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 550px;
+    z-index: 1200;
+    left: 25%;
+    backdrop-filter: blur(15px);
+} */
 .rcb-chat-drawer-container {
     position: fixed;
     bottom: 39px;
@@ -13,6 +29,39 @@
     z-index: 1200;
     left: 25%;
     backdrop-filter: blur(15px);
+}
+
+/* Media query for screens larger than 1920px */
+@media (min-width: 1920px) {
+    .rcb-chat-drawer-container {
+        width: 35%;
+        left: 45%;
+    }
+}
+
+/* Media query for screens between 1200px and 1920px */
+@media (min-width: 1500px) and (max-width: 1919px) {
+    .rcb-chat-drawer-container {
+        width: 40%;
+        left: 37%;
+    }
+}
+
+/* Media query for screens between 768px and 1199px */
+@media (min-width: 768px) and (max-width: 1499px) {
+    .rcb-chat-drawer-container {
+        width: 50%;
+        left: 16%;
+    }
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 767px) {
+    .rcb-chat-drawer-container {
+        width: 90%;
+        left: 5%;
+        height: 450px; /* Adjust the height to fit smaller screens */
+    }
 }
 
 .rcb-chat-drawer-container.open {
