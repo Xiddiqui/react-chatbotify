@@ -574,8 +574,8 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 	}
 
 	const handleToggleDrawer = () => {
-		setDrawerToggledOn(true);
-		openDrawer(true )
+		setDrawerToggledOn(prev => !prev);
+		openDrawer(drawerToggledOn)
 		
 	}
 	/**
