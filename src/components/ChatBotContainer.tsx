@@ -704,7 +704,9 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 			return botOptions.chatWindowStyle;
 		}
 	}
-
+	const params = {
+		prevPath: getPrevPath(), userInput: paramsInputRef.current, injectMessage, streamMessage, openChat,
+		openDrawer };
 	return (
 		<div 
 			onMouseDown={(event: MouseEvent) => {
@@ -720,8 +722,8 @@ const ChatBotContainer = ({ flow }: { flow: Flow }) => {
 			<ChatBotTooltip/>
 			<ChatBotButton unreadCount={unreadCount} />
 			{botOptions.isOpen ?
-				<ChatBotDrawer isOpenDrawer={botOptions.isOpenDrawer == undefined?false:botOptions.isOpenDrawer}
-					getCurrPath={getCurrPath} flow={flow}/>
+				<ChatBotDrawer isOpenDrawer={botOptions.isOpenDrawer == undefined ? false : botOptions.isOpenDrawer}
+					getCurrPath={getCurrPath} flow={flow} params={params} />
 				:null			
 			}
 			{/* styles and prevents background from scrolling on mobile when chat window is open */}

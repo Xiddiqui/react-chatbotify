@@ -1,17 +1,20 @@
 import React, { ReactNode} from 'react';
 import "./ChatBotDrawer.css";
 import { Flow } from '../../types/Flow';
+import { Params } from '../../types/Params';
 
 
 const ChatBotDrawer = ({
 	isOpenDrawer,
 	getCurrPath,
-	flow
+	flow,
+	params
 }:
 {
 	isOpenDrawer:boolean,
 	getCurrPath: () => keyof Flow | null ;
 	flow: Flow;
+	params: Params;
 	}) => {
 
 	const currPath = getCurrPath();
@@ -25,12 +28,17 @@ const ChatBotDrawer = ({
 		return;
 	}
 	
+	console.log("typeof block.renderDrawerItems", typeof block.renderDrawerItems);
+	console.log("params", params);
+	const renderItems =
+    typeof block.renderDrawerItems === "function" ? block.renderDrawerItems(params) : block.renderDrawerItems;
+	
 	return (
 		<div>			
 			<div className={`rcb-chat-drawer-container ${isOpenDrawer == false ? 'open' : ""}`}>
 				<div>
-					{block.renderDrawerItems as ReactNode ? 
-						block.renderDrawerItems as ReactNode : null		
+					{renderItems as ReactNode ? 
+						renderItems as ReactNode : null		
 					}
 				</div>
 			</div>
