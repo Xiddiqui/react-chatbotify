@@ -27,9 +27,6 @@ const ChatBotDrawer = ({
 	if (!block) {
 		return;
 	}
-	
-	console.log("typeof block.renderDrawerItems", typeof block.renderDrawerItems);
-	console.log("params", params);
 	const renderItems =
     typeof block.renderDrawerItems === "function" ? block.renderDrawerItems(params) : block.renderDrawerItems;
 	
